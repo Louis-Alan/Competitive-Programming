@@ -18,12 +18,20 @@ int bSearch(int arr[], int l, int r, int item)
 
 int main(void)
 {
-	int arr[] = { 2, 3, 4, 10, 40 };
-	int item = 10;
-	int n = sizeof(arr) / sizeof(arr[0]);
-	int result = bSearch(arr, 0, n - 1, item);
+	int item, size;
+	cout<<"Enter size: ";
+	cin>>size;
+	int arr[size];
+	cout<<"Enter Array elements: ";
+	for(int i = 0; i < size; i++)
+		cin>>arr[i];
+	cout<<"Enter item to search: ";
+	cin>>item;
+	cout<<endl;
+	
+	int result = bSearch(arr, 0, size - 1, item);
 	if(result == -1)
 		cout<<"Element not present";
 	else
-		cout<< "Element is present at position " << result<<endl;
+		cout<< "Element is present at position " << result << endl;
 }
